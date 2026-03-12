@@ -3,6 +3,7 @@
 import requests
 import argparse
 import concurrent.futures
+import time
 from datetime import datetime
 from uuid import uuid4
 from colorama import Fore, Style
@@ -66,7 +67,7 @@ if args.wordlist and args.username:
 
     def start_thread():
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
             with open(wordlist, "rb") as f:
                 for numero_linha_wordlist, linha in enumerate(f, 1):
                     executor.submit(login, linha.strip(),
