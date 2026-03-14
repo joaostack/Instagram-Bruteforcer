@@ -26,7 +26,7 @@
 
 <h3>Installing on Debian/Ubuntu WITH TOR</h3>
 <pre>apt install python3 python3-pip git proxychains-ng tor -y</pre>
-<pre>git clone https://github.com/joao406/Instagram-Bruteforce</pre>
+<pre>git clone https://github.com/joaostack/Instagram-Bruteforce</pre>
 <pre>cd InstaBrute</pre>
 <pre>sudo systemctl restart tor</pre>
 <pre>proxychains -q python3 bruteforce.py -u USERNAME -w WORDLIST</pre>
