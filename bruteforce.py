@@ -14,7 +14,7 @@ sublinhado_ansi = "\033[4m"
 resetar_cores = "\033[0m"
 
 ascii_art = Style.BRIGHT + Fore.BLUE + \
-    f"{sublinhado_ansi}Instagram-Bruteforcer 2023{resetar_cores}" + \
+    f"{sublinhado_ansi}Instagram-Bruteforcer 2026{resetar_cores}" + \
     Style.RESET_ALL + Fore.RESET
 
 time = int(datetime.now().timestamp())
@@ -66,7 +66,6 @@ if args.wordlist and args.username:
         print()
 
     def start_thread():
-
         with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
             with open(wordlist, "rb") as f:
                 for numero_linha_wordlist, linha in enumerate(f, 1):
